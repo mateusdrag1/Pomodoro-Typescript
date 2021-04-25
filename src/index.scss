@@ -65,8 +65,16 @@ body {
       background-color: #EF5D50;
       color: white;
     }
+  }
 
-    &.working{
+  .details {
+    margin: 20px 0;
+  }
+}
+
+.working {
+  .pomodoro {
+    button {
       background: #EF5D50;
       color: white;
 
@@ -75,9 +83,5 @@ body {
         color: black;
       }
     }
-  }
-
-  .details {
-    margin: 20px 0;
   }
 }
