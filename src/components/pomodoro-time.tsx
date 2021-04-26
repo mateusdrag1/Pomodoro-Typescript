@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { useInterval } from '../hooks/use-interval';
 import { Button } from './button';
 import { Timer } from './timer';
@@ -6,7 +6,7 @@ import useSound from 'use-sound';
 
 import bellStart from '../sounds/bell-start.mp3';
 import bellFinish from '../sounds/bell-finish.mp3';
-import { secondsToTime } from '../utils/seconds-to-time';
+import { secondsToHours } from '../utils/seconds-to-time';
 
 interface PomodoroTimerProps {
   pomodoroTime: number;
@@ -33,31 +33,48 @@ export function PomodoroTimer(props: PomodoroTimerProps): JSX.Element {
   useInterval(
     () => {
       setMainTime(mainTime - 1);
+      if (working) setFullWorkingTime(fullWorkingTime + 1);
     },
     timeCounting ? 1000 : null,
   );
 
-  const startWork = () => {
+  const startWork = useCallback(() => {
     setTimeCounting(true);
     setWorking(true);
     setResting(false);
     setMainTime(props.pomodoroTime);
     bellStartAudio();
-  };
+  }, [
+    setTimeCounting,
+    setWorking,
+    setResting,
+    setMainTime,
+    props.pomodoroTime,
+  ]);
 
-  const startRest = (long: boolean) => {
-    setTimeCounting(true);
-    setWorking(false);
-    setResting(true);
+  const startRest = useCallback(
+    (long: boolean) => {
+      setTimeCounting(true);
+      setWorking(false);
+      setResting(true);
 
-    if (long) {
-      setMainTime(props.longRestTime);
-    } else {
-      setMainTime(props.shortRestTime);
-    }
+      if (long) {
+        setMainTime(props.longRestTime);
+      } else {
+        setMainTime(props.shortRestTime);
+      }
 
-    bellFinishAudio();
-  };
+      bellFinishAudio();
+    },
+    [
+      setTimeCounting,
+      setWorking,
+      setResting,
+      setMainTime,
+      props.longRestTime,
+      props.shortRestTime,
+    ],
+  );
 
   useEffect(() => {
     if (working) document.body.classList.add('working');
@@ -91,7 +108,7 @@ export function PomodoroTimer(props: PomodoroTimerProps): JSX.Element {
 
   return (
     <div className="pomodoro">
-      <h2>Você está: Trabalhando</h2>
+      <h2>Você está: {working ? 'Trabalhando' : 'Descansando'}</h2>
       <Timer mainTime={mainTime} />
 
       <div className="controls">
@@ -106,7 +123,7 @@ export function PomodoroTimer(props: PomodoroTimerProps): JSX.Element {
 
       <div className="details">
         <p>Ciclos concluídos: {completedCycles}</p>
-        <p>Horas trabalhadas: {secondsToTime(fullWorkingTime)}</p>
+        <p>Horas trabalhadas: {secondsToHours(fullWorkingTime)}</p>
         <p>Pomodoros concluídos: {numberOfPomodoros}</p>
       </div>
     </div>
