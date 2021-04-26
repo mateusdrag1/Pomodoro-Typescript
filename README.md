@@ -1,46 +1,69 @@
-# Getting Started with Create React App
+<h1 align="center">
+    Pomodoro Typescript
+</h1>
+<p align="center"> Aplicativo desenvolvido no curso ed Javascript e Typescript 💻 </p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center">
+ <a href="#objective">Objetivos</a> •
+ <a href="#technologies">Tecnologias</a> • 
+ <a href="#usage">Como usar localmente</a> • 
+ <a href="#contribution">Contribuições</a> • 
+ <a href="#author">Author</a> • 
+ <a href="#license">License</a>
+</p>
 
-## Available Scripts
+<h4 align="center"> 
+	🎨 Pomodoro Typescript
+</h4>
 
-In the project directory, you can run:
+<h2 id="objective" > 🎯 Objetivos </h2>
 
-### `yarn start`
+O principal objetivo de um Pomodoro estão ligados principalmente a diminuição da ansiedade e ao aumento do foco e concentração nas tarefas, evitando assim perca de tempo e distrações. Você tem 25 minutos por ciclos, a cada ciclo é feito 1 pomodoro, assim que você acaba uma sequência de 4 pomodoros você termina um ciclo e tem um tempo maior de descanso.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<h2 id="technologies"> 🛠 Tecnologias </h2>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+As ferramentas utilizadas na construção do projeto foram:
 
-### `yarn test`
+- [ReactJS](https://reactjs.org)
+- [NodeJS](https://nodejs.org/en/)
+- [Yarn](https://yarnpkg.com) ou Npm
+- [VSCode](https://code.visualstudio.com)
+- [Git Bash](https://gitforwindows.org/)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<h2 id="usage" > 👷 Como usar localmente </h2>
 
-### `yarn build`
+É obrigatório o uso do Git, node e yarn(ou npm).
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+# Clonar o repositório
+$ git clone https://github.com/mateusdrag1/Pomodoro-Typescript.git
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# Vá para a pasta do repositório
+$ cd Pomodoro-Typescript
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Para instalar as dependências
+$ yarn install
 
-### `yarn eject`
+# Iniciar aplicação web
+$ yarn start
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+# Acesse o seguinte link:
+http://localhost:3000
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<h2 id="contribution"> 🤝 Contribuição </h2>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Este projeto é para fins de estudo também, então me mande um e-mail me contando o que você está fazendo e por que está fazendo, me ensine o que você sabe. Todos os tipos de contribuições são muito bem-vindos e apreciados!
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+<h2 id="author"> 💻 Author </h2>
 
-## Learn More
+<img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/10229087?v=4" width="100px;" alt=""/>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+By Matthieu Christian ❤ Pode me achar pelo:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+[![Linkedin Badge](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/matthieu-christian-emerenciano-de-oliveira-224101194/)
+[![Gmail Badge](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:matthieuceo@gmail.com)
+
+<h2 id="license"> 📝 Licença </h2>
+
+Este projeto está sob a licença do MIT. 
