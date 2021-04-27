@@ -1,7 +1,7 @@
 <h1 align="center">
     Pomodoro Typescript
 </h1>
-<p align="center"> Aplicativo desenvolvido no curso ed Javascript e Typescript 💻 </p>
+<p align="center"> Aplicativo desenvolvido no curso de Javascript e Typescript 💻 </p>
 
 <p align="center">
  <a href="#objective">Objetivos</a> •
